@@ -22,8 +22,12 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 3,
           "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
+            },
             {
               "$type": "Document",
               "DocumentIndex": 1,
@@ -58,7 +62,7 @@
               "RelativeDocumentMoniker": "GetRequestTest.cs",
               "ToolTip": "C:\\Users\\pvran\\source\\repos\\APITestingRestWithRestSharp\\GetRequestTest.cs",
               "RelativeToolTip": "GetRequestTest.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwEgAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADsAAAAAAAAAAAAIwE8AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-12T18:38:00.302Z",
               "EditorCaption": ""

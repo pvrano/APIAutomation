@@ -11,6 +11,7 @@ namespace APITestingRestWithRestSharp
     public class GetRequestTest
     {
         private IRestClient RestClient;
+        
 
         [OneTimeSetUp]
         public void Setup()
@@ -65,11 +66,25 @@ namespace APITestingRestWithRestSharp
 
         }
 
-        private static int[] commentIDs = new int[] { 1, 6, 12, 17, 104, 499 };
+        private static int[] CommentIds = new int[] { 1, 6, 12, 17, 104, 499 };
 
-        [Test, TestCaseSource(nameof(commentIDs))]
-        public async Task ValidateThePresenceOfCommentswithGivenIds(int commentIDs)
+        [Test, TestCaseSource(nameof(CommentIds))]
+        public async Task ValidateThePresenceOfCommentswithGivenIds(int commentId)
         {
+            RestRequest request = new RestRequest($"/comments/{commentId}",Method.Get);
+            RestResponse response = await RestClient.ExecuteAsync(request);
+
+            JsonSerializerOptions options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true};
+            Comment comment = JsonSerializer.Deserialize<Comment>(response.Content,options);
+
+            Assert.Multiple(() =>
+                {
+                Assert.That(response.IsSuccessful, Is.True, "API request failed");
+                Assert.That(comment, Is.Not.Null, "comment object is null");
+                Assert.That(comment.commentid, Is.EqualTo(commentId), "comment Id does not exist");
+                Assert.That(comment.commentEmail, Is.Not.Null.And.Not.Empty, "Email is null");
+
+            });
 
         }
         

@@ -98,3 +98,4 @@ C:\Users\pvran\source\repos\APITestingRestWithRestSharp\obj\Debug\net8.0\refint\
 C:\Users\pvran\source\repos\APITestingRestWithRestSharp\obj\Debug\net8.0\APITestingRestWithRestSharp.pdb
 C:\Users\pvran\source\repos\APITestingRestWithRestSharp\obj\Debug\net8.0\APITestingRestWithRestSharp.genruntimeconfig.cache
 C:\Users\pvran\source\repos\APITestingRestWithRestSharp\obj\Debug\net8.0\ref\APITestingRestWithRestSharp.dll
+C:\Users\pvran\source\repos\APITestingRestWithRestSharp\obj\Debug\net8.0\APITestingRestWithRestSharp.sourcelink.json
